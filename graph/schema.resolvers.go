@@ -6,17 +6,25 @@ package graph
 import (
 	"context"
 	"fmt"
+	"math/rand"
 
 	"github.com/msartini/graphql-go/graph/generated"
 	"github.com/msartini/graphql-go/graph/model"
 )
 
 func (r *mutationResolver) CreateVideo(ctx context.Context, input model.NewVideo) (*model.Video, error) {
-	panic(fmt.Errorf("not implemented"))
+	video := &model.Video{
+		ID:     fmt.Sprintf("T%d", rand.Int()),
+		Title:  input.Title,
+		URL:    input.URL,
+		Author: &model.User{ID: input.UserID, Name: "user " + input.UserID},
+	}
+	r.videos = append(r.videos, video)
+	return video, nil
 }
 
 func (r *queryResolver) Videos(ctx context.Context) ([]*model.Video, error) {
-	panic(fmt.Errorf("not implemented"))
+	return r.videos, nil
 }
 
 func (r *subscriptionResolver) VideoAdded(ctx context.Context, repoFullName string) (<-chan *model.Video, error) {
