@@ -1,6 +1,6 @@
-module gitlab.com/pragmaticreviews/graphql-go
+module github.com/msartini/graphql-go
 
-go 1.16
+go 1.14
 
 require (
 	github.com/99designs/gqlgen v0.11.3

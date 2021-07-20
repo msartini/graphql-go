@@ -1,6 +1,6 @@
 package graph
 
-import "gitlab.com/pragmaticreviews/graphql-go/graph/model"
+import "github.com/msartini/graphql-go/graph/model"
 
 //go:generate go run github.com/99designs/gqlgen
 

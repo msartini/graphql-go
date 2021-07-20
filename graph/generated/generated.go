@@ -13,9 +13,9 @@ import (
 
 	"github.com/99designs/gqlgen/graphql"
 	"github.com/99designs/gqlgen/graphql/introspection"
+	"github.com/msartini/graphql-go/graph/model"
 	gqlparser "github.com/vektah/gqlparser/v2"
 	"github.com/vektah/gqlparser/v2/ast"
-	"gitlab.com/pragmaticreviews/graphql-go/graph/model"
 )
 
 // region    ************************** generated!.gotpl **************************
@@ -291,7 +291,7 @@ func (ec *executionContext) field_Mutation_createVideo_args(ctx context.Context,
 	args := map[string]interface{}{}
 	var arg0 model.NewVideo
 	if tmp, ok := rawArgs["input"]; ok {
-		arg0, err = ec.unmarshalNNewVideo2gitlabᚗcomᚋpragmaticreviewsᚋgraphqlᚑgoᚋgraphᚋmodelᚐNewVideo(ctx, tmp)
+		arg0, err = ec.unmarshalNNewVideo2githubᚗcomᚋmsartiniᚋgraphqlᚑgoᚋgraphᚋmodelᚐNewVideo(ctx, tmp)
 		if err != nil {
 			return nil, err
 		}
@@ -402,7 +402,7 @@ func (ec *executionContext) _Mutation_createVideo(ctx context.Context, field gra
 	}
 	res := resTmp.(*model.Video)
 	fc.Result = res
-	return ec.marshalNVideo2ᚖgitlabᚗcomᚋpragmaticreviewsᚋgraphqlᚑgoᚋgraphᚋmodelᚐVideo(ctx, field.Selections, res)
+	return ec.marshalNVideo2ᚖgithubᚗcomᚋmsartiniᚋgraphqlᚑgoᚋgraphᚋmodelᚐVideo(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _Query_videos(ctx context.Context, field graphql.CollectedField) (ret graphql.Marshaler) {
@@ -436,7 +436,7 @@ func (ec *executionContext) _Query_videos(ctx context.Context, field graphql.Col
 	}
 	res := resTmp.([]*model.Video)
 	fc.Result = res
-	return ec.marshalNVideo2ᚕᚖgitlabᚗcomᚋpragmaticreviewsᚋgraphqlᚑgoᚋgraphᚋmodelᚐVideoᚄ(ctx, field.Selections, res)
+	return ec.marshalNVideo2ᚕᚖgithubᚗcomᚋmsartiniᚋgraphqlᚑgoᚋgraphᚋmodelᚐVideoᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _Query___type(ctx context.Context, field graphql.CollectedField) (ret graphql.Marshaler) {
@@ -550,7 +550,7 @@ func (ec *executionContext) _Subscription_videoAdded(ctx context.Context, field 
 			w.Write([]byte{'{'})
 			graphql.MarshalString(field.Alias).MarshalGQL(w)
 			w.Write([]byte{':'})
-			ec.marshalOVideo2ᚖgitlabᚗcomᚋpragmaticreviewsᚋgraphqlᚑgoᚋgraphᚋmodelᚐVideo(ctx, field.Selections, res).MarshalGQL(w)
+			ec.marshalOVideo2ᚖgithubᚗcomᚋmsartiniᚋgraphqlᚑgoᚋgraphᚋmodelᚐVideo(ctx, field.Selections, res).MarshalGQL(w)
 			w.Write([]byte{'}'})
 		})
 	}
@@ -757,7 +757,7 @@ func (ec *executionContext) _Video_author(ctx context.Context, field graphql.Col
 	}
 	res := resTmp.(*model.User)
 	fc.Result = res
-	return ec.marshalNUser2ᚖgitlabᚗcomᚋpragmaticreviewsᚋgraphqlᚑgoᚋgraphᚋmodelᚐUser(ctx, field.Selections, res)
+	return ec.marshalNUser2ᚖgithubᚗcomᚋmsartiniᚋgraphqlᚑgoᚋgraphᚋmodelᚐUser(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) ___Directive_name(ctx context.Context, field graphql.CollectedField, obj *introspection.Directive) (ret graphql.Marshaler) {
@@ -2295,7 +2295,7 @@ func (ec *executionContext) marshalNID2string(ctx context.Context, sel ast.Selec
 	return res
 }
 
-func (ec *executionContext) unmarshalNNewVideo2gitlabᚗcomᚋpragmaticreviewsᚋgraphqlᚑgoᚋgraphᚋmodelᚐNewVideo(ctx context.Context, v interface{}) (model.NewVideo, error) {
+func (ec *executionContext) unmarshalNNewVideo2githubᚗcomᚋmsartiniᚋgraphqlᚑgoᚋgraphᚋmodelᚐNewVideo(ctx context.Context, v interface{}) (model.NewVideo, error) {
 	return ec.unmarshalInputNewVideo(ctx, v)
 }
 
@@ -2313,11 +2313,11 @@ func (ec *executionContext) marshalNString2string(ctx context.Context, sel ast.S
 	return res
 }
 
-func (ec *executionContext) marshalNUser2gitlabᚗcomᚋpragmaticreviewsᚋgraphqlᚑgoᚋgraphᚋmodelᚐUser(ctx context.Context, sel ast.SelectionSet, v model.User) graphql.Marshaler {
+func (ec *executionContext) marshalNUser2githubᚗcomᚋmsartiniᚋgraphqlᚑgoᚋgraphᚋmodelᚐUser(ctx context.Context, sel ast.SelectionSet, v model.User) graphql.Marshaler {
 	return ec._User(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNUser2ᚖgitlabᚗcomᚋpragmaticreviewsᚋgraphqlᚑgoᚋgraphᚋmodelᚐUser(ctx context.Context, sel ast.SelectionSet, v *model.User) graphql.Marshaler {
+func (ec *executionContext) marshalNUser2ᚖgithubᚗcomᚋmsartiniᚋgraphqlᚑgoᚋgraphᚋmodelᚐUser(ctx context.Context, sel ast.SelectionSet, v *model.User) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "must not be null")
@@ -2327,11 +2327,11 @@ func (ec *executionContext) marshalNUser2ᚖgitlabᚗcomᚋpragmaticreviewsᚋgr
 	return ec._User(ctx, sel, v)
 }
 
-func (ec *executionContext) marshalNVideo2gitlabᚗcomᚋpragmaticreviewsᚋgraphqlᚑgoᚋgraphᚋmodelᚐVideo(ctx context.Context, sel ast.SelectionSet, v model.Video) graphql.Marshaler {
+func (ec *executionContext) marshalNVideo2githubᚗcomᚋmsartiniᚋgraphqlᚑgoᚋgraphᚋmodelᚐVideo(ctx context.Context, sel ast.SelectionSet, v model.Video) graphql.Marshaler {
 	return ec._Video(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNVideo2ᚕᚖgitlabᚗcomᚋpragmaticreviewsᚋgraphqlᚑgoᚋgraphᚋmodelᚐVideoᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.Video) graphql.Marshaler {
+func (ec *executionContext) marshalNVideo2ᚕᚖgithubᚗcomᚋmsartiniᚋgraphqlᚑgoᚋgraphᚋmodelᚐVideoᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.Video) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -2355,7 +2355,7 @@ func (ec *executionContext) marshalNVideo2ᚕᚖgitlabᚗcomᚋpragmaticreviews�
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNVideo2ᚖgitlabᚗcomᚋpragmaticreviewsᚋgraphqlᚑgoᚋgraphᚋmodelᚐVideo(ctx, sel, v[i])
+			ret[i] = ec.marshalNVideo2ᚖgithubᚗcomᚋmsartiniᚋgraphqlᚑgoᚋgraphᚋmodelᚐVideo(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -2368,7 +2368,7 @@ func (ec *executionContext) marshalNVideo2ᚕᚖgitlabᚗcomᚋpragmaticreviews�
 	return ret
 }
 
-func (ec *executionContext) marshalNVideo2ᚖgitlabᚗcomᚋpragmaticreviewsᚋgraphqlᚑgoᚋgraphᚋmodelᚐVideo(ctx context.Context, sel ast.SelectionSet, v *model.Video) graphql.Marshaler {
+func (ec *executionContext) marshalNVideo2ᚖgithubᚗcomᚋmsartiniᚋgraphqlᚑgoᚋgraphᚋmodelᚐVideo(ctx context.Context, sel ast.SelectionSet, v *model.Video) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "must not be null")
@@ -2650,11 +2650,11 @@ func (ec *executionContext) marshalOString2ᚖstring(ctx context.Context, sel as
 	return ec.marshalOString2string(ctx, sel, *v)
 }
 
-func (ec *executionContext) marshalOVideo2gitlabᚗcomᚋpragmaticreviewsᚋgraphqlᚑgoᚋgraphᚋmodelᚐVideo(ctx context.Context, sel ast.SelectionSet, v model.Video) graphql.Marshaler {
+func (ec *executionContext) marshalOVideo2githubᚗcomᚋmsartiniᚋgraphqlᚑgoᚋgraphᚋmodelᚐVideo(ctx context.Context, sel ast.SelectionSet, v model.Video) graphql.Marshaler {
 	return ec._Video(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalOVideo2ᚖgitlabᚗcomᚋpragmaticreviewsᚋgraphqlᚑgoᚋgraphᚋmodelᚐVideo(ctx context.Context, sel ast.SelectionSet, v *model.Video) graphql.Marshaler {
+func (ec *executionContext) marshalOVideo2ᚖgithubᚗcomᚋmsartiniᚋgraphqlᚑgoᚋgraphᚋmodelᚐVideo(ctx context.Context, sel ast.SelectionSet, v *model.Video) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
